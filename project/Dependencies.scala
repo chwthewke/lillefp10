@@ -16,7 +16,7 @@ object Dependencies {
 
   val catsVersion = "1.1.0"
 
-  val cats: D = group( "org.typelevel" %% "cats-core" % catsVersion, "org.typelevel" %% "mouse" % "0.16" )()
+  val cats: D = group( "org.typelevel" %% "cats-core" % catsVersion, "org.typelevel" %% "mouse" % "0.17" )()
 
   val monocleVersion = "1.5.1-cats"
 
@@ -36,7 +36,8 @@ object Dependencies {
       .map( _.exclude( "org.typelevel", "cats-core_2.12" ) )
 
   val enumeratumVersion: String = "1.5.13"
-  val enumeratum: D             = group( "com.beachape" %% "enumeratum" % enumeratumVersion )()
+  val enumeratum: D =
+    group( "com.beachape" %% "enumeratum" % enumeratumVersion )()
 
   val common: D = kindProjector ++ cats ++ monocle ++ enumeratum ++ scalacheck ++ scalatest
 

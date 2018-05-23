@@ -9,16 +9,10 @@ object ScalacPlugin extends AutoPlugin {
     "-feature",
     "-language:higherKinds",
     "-unchecked",
-    "-Xfatal-warnings",
     "-Xfuture",
-    "-Xlint",
     "-Ywarn-macros:after",
     "-Yno-adapted-args",
-    "-Ypartial-unification",
-    "-Ywarn-dead-code",
-    "-Ywarn-numeric-widen",
-    "-Ywarn-unused-import",
-    "-Ywarn-value-discard"
+    "-Ypartial-unification"
   )
 
   def workaroundForIntellij( opts: Seq[String] ): Seq[String] =
